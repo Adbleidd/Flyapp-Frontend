@@ -1,0 +1,30 @@
+.home {
+    padding: 5rem 2rem;
+
+    &__app {
+        max-width: 830px;
+        height: auto;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 107px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__counter {
+        margin: 3rem 0 0.5rem;
+        text-align: end;
+    }
+
+    &__content {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background-color: $grey;
+    }
+}
