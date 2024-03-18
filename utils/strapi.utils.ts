@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = process.env.STRAPI_URL || "http://127.0.0.1:1337";
+export const BASE_URL = process.env.STRAPI_URL || "http://127.0.0.1:1337";
 
 export async function fetchDataFromStrapi(route: string) {
     const url = `${BASE_URL}/api/${route}`;

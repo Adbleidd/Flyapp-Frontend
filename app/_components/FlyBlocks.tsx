@@ -5,6 +5,7 @@ import { useState } from "react";
 import FlyBlock from "./FlyBlock";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import { BASE_URL } from "@/utils/strapi.utils";
 
 interface FlyBlocksProps {
     items: any,
@@ -32,7 +33,7 @@ const FlyBlocks: FC<FlyBlocksProps> = (props) => {
                 <FlyBlock key={item.id} data={item} />
               ))}
             </div>
-            <Link className="btn" ref={ref} href={process.env.STRAPI_URL || "http://localhost:1337/admin/auth/login"}>Add flight</Link>
+            <Link className="btn" ref={ref} href={BASE_URL + '/admin/auth/login'}>Add flight</Link>
         </>
     );
 }
