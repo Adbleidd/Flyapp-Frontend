@@ -16,7 +16,7 @@ export async function fetchDataFromStrapi(route: string) {
 
 export function processHomeData(data: any) {
     return {
-        src: BASE_URL + data.attributes?.Logo?.data?.attributes?.url,
+        src: data.attributes?.Logo?.data?.attributes?.url,
         alt: data.attributes?.Logo?.data?.attributes?.alternativeText,
         id: data.attributes?.Logo?.data?.id,
     }
@@ -27,9 +27,9 @@ export function processFlyBlockData(data: any) {
         ...item.attributes,
         id: item.id,
         airlineName: item.attributes?.Airline?.data?.attributes?.Name,
-        airlineLogo: BASE_URL + item.attributes?.Airline?.data?.attributes?.Logo?.data?.attributes?.url,
+        airlineLogo: item.attributes?.Airline?.data?.attributes?.Logo?.data?.attributes?.url,
         countryName: item.attributes?.Country?.data?.attributes?.Name,
-        countryFlag: BASE_URL + item.attributes?.Country?.data?.attributes?.Flag?.data?.attributes?.url,
+        countryFlag: item.attributes?.Country?.data?.attributes?.Flag?.data?.attributes?.url,
     }));
 
     FlyBlockData.sort(
